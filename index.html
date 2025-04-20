@@ -13,69 +13,6 @@
       color: #034d2b;
     }
 
-    /* Slide-in effect */
-    .slide-in {
-      animation: slideIn 2s ease-out;
-    }
-
-    @keyframes slideIn {
-      from {
-        transform: translateX(-100%);
-        opacity: 0;
-      }
-      to {
-        transform: translateX(0);
-        opacity: 1;
-      }
-    }
-
-    /* Fade effect */
-    .fade {
-      animation: fadeIn 3s ease-in-out;
-    }
-
-    @keyframes fadeIn {
-      from {
-        opacity: 0;
-      }
-      to {
-        opacity: 1;
-      }
-    }
-
-    /* Bounce effect */
-    .bounce {
-      animation: bounce 1.5s ease-in-out infinite;
-    }
-
-    @keyframes bounce {
-      0% {
-        transform: translateY(0);
-      }
-      50% {
-        transform: translateY(-10px);
-      }
-      100% {
-        transform: translateY(0);
-      }
-    }
-
-    /* Zoom effect */
-    .zoom {
-      animation: zoomIn 2s ease-in-out;
-    }
-
-    @keyframes zoomIn {
-      from {
-        transform: scale(0.5);
-        opacity: 0;
-      }
-      to {
-        transform: scale(1);
-        opacity: 1;
-      }
-    }
-
     h1 {
       display: flex;
       align-items: center;
@@ -96,6 +33,12 @@
       margin: 20px 0;
       border-radius: 10px;
       box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    img:hover {
+      transform: scale(1.1);
+      box-shadow: 0px 8px 15px rgba(0, 128, 0, 0.4);
     }
 
     .facts {
@@ -124,22 +67,20 @@
 </head>
 <body>
 
-  <h1 class="slide-in">
+  <h1>
     <img src="https://pmshri.education.gov.in/static/media/pm-shri.ec4909ab870a611f73d7.png" alt="PM SHRI Logo">
     PM SHRI KV IIT POWAI
   </h1>
 
-  <div class="fade">
-    <h2>🌿 Neem Tree (Azadirachta indica) - नीम 🌿</h2>
-    <p><strong>Scientific Name:</strong> Azadirachta indica</p>
-    <p><strong>Common Name:</strong> Neem</p>
-    <p><strong>Hindi Name:</strong> नीम</p>
-    <p><strong>Flora Name:</strong> Indian Lilac</p>
-    <p><strong>Trees in IIT Bombay:</strong> 🌳 5000+</p>
-    <p><strong>Neem Trees in IITB:</strong> 🌿 Around 300+</p>
-  </div>
+  <h2>🌿 Neem Tree (Azadirachta indica) - नीम 🌿</h2>
+  <p><strong>Scientific Name:</strong> Azadirachta indica</p>
+  <p><strong>Common Name:</strong> Neem</p>
+  <p><strong>Hindi Name:</strong> नीम</p>
+  <p><strong>Flora Name:</strong> Indian Lilac</p>
+  <p><strong>Trees in IIT Bombay:</strong> 🌳 5000+</p>
+  <p><strong>Neem Trees in IITB:</strong> 🌿 Around 300+</p>
 
-  <div class="facts bounce">
+  <div class="facts">
     <h2>🌟 Interesting Facts about Neem 🌟</h2>
     <ul>
       <li>🌱 Neem has been used for over 2000 years in India.</li>
