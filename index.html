@@ -1,59 +1,144 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Neem Tree Project</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Neem Tree 🌿</title>
   <style>
     body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: linear-gradient(to right, #d0f0c0, #e0ffe0);
-      color: #2e7d32;
+      background: linear-gradient(to right, #e0ffe0, #d0f0ff);
+      font-family: 'Arial', sans-serif;
       margin: 0;
       padding: 0;
-      animation: fadeIn 2s ease-in;
-    }
-
-    header {
-      text-align: center;
-      padding: 20px;
-      background-color: #a5d6a7;
-      border-bottom: 5px solid #66bb6a;
-    }
-
-    header h1 {
-      font-size: 2.5em;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 15px;
-      animation: bounceIn 1s;
-    }
-
-    header img {
-      height: 60px;
+      animation: fadeIn 2s ease-in-out;
     }
 
     @keyframes fadeIn {
-      0% { opacity: 0; }
-      100% { opacity: 1; }
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
     }
 
-    @keyframes bounceIn {
-      0% { transform: scale(0.5); opacity: 0; }
-      60% { transform: scale(1.1); opacity: 1; }
-      100% { transform: scale(1); }
+    header {
+      background-color: #4caf50;
+      color: white;
+      padding: 20px;
+      text-align: center;
+      font-size: 28px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+    }
+
+    img.logo {
+      height: 60px;
+    }
+
+    .content {
+      padding: 30px;
+      font-size: 18px;
+      line-height: 1.8;
+      color: #333;
+    }
+
+    .facts {
+      background-color: #fffbe6;
+      border-left: 6px solid #ff9800;
+      padding: 15px;
+      margin: 20px 0;
+    }
+
+    .images {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 20px;
+    }
+
+    .images img {
+      border-radius: 15px;
+      width: 300px;
+      height: auto;
+      transition: transform 0.3s ease;
+    }
+
+    .images img:hover {
+      transform: scale(1.05);
+    }
+
+    footer {
+      background-color: #4caf50;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      font-weight: bold;
+    }
+
+    h2 {
+      color: #2e7d32;
+    }
+
+    .highlight {
+      font-weight: bold;
+      color: #1b5e20;
     }
   </style>
 </head>
 <body>
   <header>
-    <h1>
-      <img src="https://pmshri.education.gov.in/static/media/pm-shri.ec4909ab870a611f73d7.png" alt="PM SHRI Logo">
-      PM SHRI KV IIT Powai 🌿🌳
-    </h1>
+    <img src="https://pmshri.education.gov.in/static/media/pm-shri.ec4909ab870a611f73d7.png" alt="PM SHRI Logo" class="logo" />
+    PM SHRI KV IIT POWAI 🌳
   </header>
 
-  <!-- The rest of your content goes here -->
+  <div class="content">
+    <h2>🌿 About the Neem Tree (Azadirachta indica)</h2>
+    <p>
+      The neem tree is a fast-growing, evergreen tree native to the Indian subcontinent. It’s widely known for its medicinal, antibacterial, and insect-repelling properties. 🌱
+    </p>
+    <p><span class="highlight">Hindi Name:</span> नीम</p>
+    <p><span class="highlight">Scientific Name:</span> Azadirachta indica</p>
 
+    <h2>🌳 Neem Trees in IIT Bombay</h2>
+    <p>There are approximately <span class="highlight">4,000 trees</span> in IIT Bombay. Out of them, nearly <span class="highlight">250 are Neem trees</span>! 🌳🌿</p>
+
+    <h2>✨ Interesting Facts About Neem Tree</h2>
+    <div class="facts">
+      <ul>
+        <li>🌿 Neem is called the "Village Pharmacy" in India.</li>
+        <li>🦟 It naturally repels mosquitoes and pests.</li>
+        <li>🧴 Used in skincare and beauty products worldwide.</li>
+        <li>🌱 Helps purify the air and improve soil fertility.</li>
+        <li>🍃 Neem oil is used in natural agriculture as a pesticide.</li>
+        <li>🌳 It can live for over 200 years!</li>
+        <li>💚 Neem leaves are used to treat skin disorders.</li>
+        <li>🌞 Offers excellent shade in hot climates.</li>
+        <li>🛡️ Has antifungal, antiviral, and antibacterial properties.</li>
+        <li>🧘 Used in Ayurvedic treatments for centuries.</li>
+        <li>🐛 Neem oil is eco-friendly and non-toxic to animals.</li>
+        <li>🌿 Its bark is used in toothpaste for healthy gums.</li>
+        <li>🍀 Neem twigs are used as natural toothbrushes.</li>
+        <li>💪 Boosts immunity and helps fight infections.</li>
+        <li>🌬️ It improves overall air quality around it.</li>
+        <li>☀️ Grows well in dry and hot climates.</li>
+        <li>🌏 Popular in countries like India, Africa, and the Middle East.</li>
+        <li>🌼 Neem flowers are small and fragrant.</li>
+        <li>🌰 Neem seeds are used for oil extraction.</li>
+        <li>🧠 Known for enhancing memory in Ayurveda.</li>
+      </ul>
+    </div>
+
+    <h2>📸 Neem Tree Images</h2>
+    <div class="images">
+      <img src="https://media.istockphoto.com/id/1188067568/photo/azadirachta-indica-a-branch-of-neem-tree-leaves-natural-medicine.jpg?s=612x612&w=0&k=20&c=UwDQ2iD0hvdVgUby2cGOZtLleSGguxsB_-4izFTJaYw=" alt="Neem Tree 1">
+      <img src="https://images.pexels.com/photos/12643734/pexels-photo-12643734.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="Neem Tree 2">
+      <img src="https://media.istockphoto.com/id/1762094055/photo/green-lush-plant.jpg?s=612x612&w=0&k=20&c=nGMGEpIsRn6sXIKUSSeyu1t83RrEPwRTyt_funneIe8=" alt="Neem Tree 3">
+      <img src="https://images.pexels.com/photos/6033417/pexels-photo-6033417.jpeg" alt="Leaves Close Up">
+    </div>
+  </div>
+
+  <footer>
+    🙌 All credit goes to Shaurya Shinde, Arnav Shinde, Harsh Kohli, and Parth Singh - 9th B, 2025 🙌
+  </footer>
 </body>
 </html>
