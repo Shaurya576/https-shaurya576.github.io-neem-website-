@@ -11,6 +11,7 @@
       margin: 0;
       padding: 20px;
       color: #034d2b;
+      overflow-x: hidden;
     }
 
     h1 {
@@ -35,21 +36,6 @@
       box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
     }
 
-    .slide-in {
-      animation: slideIn 1s ease-out forwards;
-    }
-
-    @keyframes slideIn {
-      0% {
-        transform: translateX(-100%);
-        opacity: 0;
-      }
-      100% {
-        transform: translateX(0);
-        opacity: 1;
-      }
-    }
-
     .facts {
       background-color: #f0fff0;
       padding: 20px;
@@ -64,17 +50,54 @@
       text-align: center;
       border-radius: 10px;
       font-weight: bold;
+      margin-top: 30px;
+    }
+
+    .legend {
+      margin-top: 10px;
+      font-size: 1.2rem;
+      color: #2b6d2b;
+    }
+
+    /* BIRD ANIMATION */
+    .bird {
+      position: absolute;
+      top: 50px;
+      left: -100px;
+      font-size: 2rem;
+      animation: fly 20s linear infinite;
+      z-index: 10;
+    }
+
+    .bird:nth-child(2) {
+      top: 100px;
+      animation-delay: 5s;
+    }
+
+    .bird:nth-child(3) {
+      top: 150px;
+      animation-delay: 10s;
+    }
+
+    @keyframes fly {
+      0% { transform: translateX(-100px) scale(1); }
+      100% { transform: translateX(120vw) scale(1.1); }
     }
   </style>
 </head>
 <body>
 
-  <h1 class="slide-in">
+  <!-- Flying Birds -->
+  <div class="bird">🕊️</div>
+  <div class="bird">🕊️</div>
+  <div class="bird">🕊️</div>
+
+  <h1>
     <img src="https://pmshri.education.gov.in/static/media/pm-shri.ec4909ab870a611f73d7.png" alt="PM SHRI Logo">
     PM SHRI KV IIT POWAI
   </h1>
 
-  <div class="slide-in">
+  <div>
     <h2>🌿 Neem Tree (Azadirachta indica) - नीम 🌿</h2>
     <p><strong>Scientific Name:</strong> Azadirachta indica</p>
     <p><strong>Common Name:</strong> Neem</p>
@@ -84,7 +107,7 @@
     <p><strong>Neem Trees in IITB:</strong> 🌿 Around 300+</p>
   </div>
 
-  <div class="facts slide-in">
+  <div class="facts">
     <h2>🌟 Interesting Facts about Neem 🌟</h2>
     <ul>
       <li>🌱 Neem has been used for over 2000 years in India.</li>
@@ -120,7 +143,8 @@
     Printing Supervisor – Arnav Shinde 🖨️<br>
     Lamination Supervisor – Harsh Kohli 🔖<br>
     Investor – Parth Singh 💸<br>
-    📚 Class 9th B, 2025 📚
+    📚 Class 9th B, 2025 📚<br>
+    <div class="legend">🔥 Legendary Team 💪👑🧠🖨️🔖💸</div>
   </footer>
 
 </body>
