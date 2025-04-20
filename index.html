@@ -27,26 +27,31 @@
       margin-right: 15px;
     }
 
-    img {
-      width: 100%;
-      max-width: 500px;
-      margin: 20px 0;
-      border-radius: 10px;
-      box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    .search-container {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 20px;
     }
 
-    img:hover {
-      transform: scale(1.1);
-      box-shadow: 0px 8px 15px rgba(0, 128, 0, 0.4);
+    .search-bar {
+      width: 300px;
+      padding: 10px;
+      font-size: 1rem;
+      border: 2px solid #228b22;
+      border-radius: 25px;
+      outline: none;
     }
 
-    .facts {
+    .search-bar:focus {
+      border-color: #2e8b57;
+    }
+
+    .response-container {
+      margin-top: 20px;
       background-color: #f0fff0;
-      padding: 20px;
+      padding: 10px;
       border-radius: 10px;
       box-shadow: 0px 0px 8px rgba(0, 128, 0, 0.3);
-      margin-bottom: 30px;
     }
 
     footer {
@@ -59,57 +64,65 @@
     }
 
     .legend {
-      margin-top: 10px;
-      font-size: 1.2rem;
-      color: #2b6d2b;
+      color: #2e8b57;
+    }
+
+    .neem-image {
+      max-width: 100%;
+      height: auto;
+      border-radius: 10px;
+      margin-top: 15px;
     }
   </style>
 </head>
 <body>
+
+  <!-- Search bar section -->
+  <div class="search-container">
+    <input class="search-bar" type="text" placeholder="Ask me about Neem Tree..." id="userInput">
+  </div>
 
   <h1>
     <img src="https://pmshri.education.gov.in/static/media/pm-shri.ec4909ab870a611f73d7.png" alt="PM SHRI Logo">
     PM SHRI KV IIT POWAI
   </h1>
 
-  <h2>🌿 Neem Tree (Azadirachta indica) - नीम 🌿</h2>
-  <p><strong>Scientific Name:</strong> Azadirachta indica</p>
-  <p><strong>Common Name:</strong> Neem</p>
-  <p><strong>Hindi Name:</strong> नीम</p>
-  <p><strong>Flora Name:</strong> Indian Lilac</p>
-  <p><strong>Trees in IIT Bombay:</strong> 🌳 5000+</p>
-  <p><strong>Neem Trees in IITB:</strong> 🌿 Around 300+</p>
-
-  <div class="facts">
-    <h2>🌟 Interesting Facts about Neem 🌟</h2>
-    <ul>
-      <li>🌱 Neem has been used for over 2000 years in India.</li>
-      <li>🦟 It acts as a natural mosquito repellent.</li>
-      <li>🌿 Neem oil is used in cosmetics and skin care.</li>
-      <li>🛡️ It's called "Village Pharmacy" due to its healing power.</li>
-      <li>🌾 Farmers use neem as natural pesticide.</li>
-      <li>🍃 Neem leaves purify the air and environment.</li>
-      <li>🦷 Neem twigs are used as natural toothbrushes (datun).</li>
-      <li>💊 Used in Ayurvedic and Unani medicine systems.</li>
-      <li>💚 Rich in antioxidants and antifungal properties.</li>
-      <li>🌍 Plays a major role in sustainable agriculture.</li>
-      <li>💧 Neem can survive in dry regions with less water.</li>
-      <li>👶 Neem is used in baby products due to its gentleness.</li>
-      <li>😷 Used in treating skin infections and rashes.</li>
-      <li>🧼 Added in herbal soaps and shampoos.</li>
-      <li>🌳 Its wood is termite resistant.</li>
-      <li>📜 Neem is even mentioned in ancient texts.</li>
-      <li>👩‍🌾 Used in making organic fertilizers.</li>
-      <li>🦠 Known to kill bacteria and fungi naturally.</li>
-      <li>⚖️ Helps balance the ecosystem.</li>
-      <li>📖 Promotes learning about herbal and natural medicine.</li>
-    </ul>
+  <div class="response-container" id="response">
+    <p>Ask me anything about Neem Tree! 🌿</p>
   </div>
 
-  <img src="https://media.istockphoto.com/id/1188067568/photo/azadirachta-indica-a-branch-of-neem-tree-leaves-natural-medicine.jpg?s=612x612&w=0&k=20&c=UwDQ2iD0hvdVgUby2cGOZtLleSGguxsB_-4izFTJaYw=" alt="Neem Image 1" />
-  <img src="https://images.pexels.com/photos/12643734/pexels-photo-12643734.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="Neem Image 2" />
-  <img src="https://media.istockphoto.com/id/1762094055/photo/green-lush-plant.jpg?s=612x612&w=0&k=20&c=nGMGEpIsRn6sXIKUSSeyu1t83RrEPwRTyt_funneIe8=" alt="Neem Image 3" />
-  <img src="https://images.pexels.com/photos/6033417/pexels-photo-6033417.jpeg" alt="Neem Leaves Closeup" />
+  <img class="neem-image" src="https://images.pexels.com/photos/12643734/pexels-photo-12643734.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="Neem Tree Image">
+
+  <h2>About the Neem Tree 🌳</h2>
+  <p><strong>Scientific Name:</strong> Azadirachta indica</p>
+  <p><strong>Common Name:</strong> Neem</p>
+  <p><strong>Floral Name:</strong> Indian Lilac</p>
+  <p><strong>Family:</strong> Meliaceae</p>
+  <p><strong>Other Names:</strong> Nim, Neen, Nimba (Hindi)</p>
+
+  <h3>Interesting Facts About Neem 🌿</h3>
+  <ul>
+    <li>The Neem tree is known for its medicinal properties, especially for skin and hair health.</li>
+    <li>It is often referred to as "The Village Pharmacy" due to its wide range of uses in traditional medicine.</li>
+    <li>Neem leaves are used to make organic pesticides, as they have natural insect-repelling properties.</li>
+    <li>Neem oil is widely used in cosmetics and personal care products.</li>
+    <li>In many cultures, Neem is considered a sacred tree and is often planted near temples.</li>
+    <li>Its bark, leaves, and seeds are used in various Ayurvedic medicines.</li>
+    <li>The tree is also known for its antibacterial and antifungal properties, making it useful in treating infections.</li>
+    <li>Neem leaves can help purify the air, making it a beneficial tree to plant in urban areas.</li>
+    <li>In India, it is common to use Neem in religious rituals, symbolizing health and protection.</li>
+    <li>Neem is also known for its ability to promote the growth of other plants by improving soil quality.</li>
+    <li>The Neem tree can live for over 100 years, and it grows quickly in tropical and subtropical climates.</li>
+    <li>It is believed that planting a Neem tree in the home can bring good health and prosperity.</li>
+    <li>Neem is also an effective mosquito repellent and is used in creating organic insect repellents.</li>
+    <li>The Neem tree produces small white flowers that are fragrant and attractive to pollinators.</li>
+    <li>The tree's roots help in preventing soil erosion, particularly in areas prone to desertification.</li>
+    <li>Neem is also used to treat waterborne diseases and purify drinking water in rural areas.</li>
+    <li>In addition to medicinal uses, Neem is also a source of biofuel.</li>
+    <li>The tree has a strong resilience to drought and is considered a hardy plant in arid regions.</li>
+    <li>In traditional Indian medicine, Neem is used to detoxify the body and improve immune function.</li>
+    <li>Neem products are eco-friendly and biodegradable, making them safe for the environment.</li>
+  </ul>
 
   <footer>
     Website Maker – Shaurya Shinde 🧠<br>
@@ -119,6 +132,36 @@
     📚 Class 9th B, 2025 📚<br>
     <div class="legend">🔥 Legendary Team 💪👑🧠🖨️🔖💸</div>
   </footer>
+
+  <script>
+    // JavaScript for AI-like search functionality
+    const userInput = document.getElementById("userInput");
+    const responseContainer = document.getElementById("response");
+
+    userInput.addEventListener("keyup", function(event) {
+      if (event.key === "Enter") {
+        let query = userInput.value.toLowerCase().trim();
+        let response = "Sorry, I don't understand that question. Please try asking something else!";
+        
+        if (query.includes("scientific name")) {
+          response = "The scientific name of the Neem tree is Azadirachta indica.";
+        } else if (query.includes("common name")) {
+          response = "The common name of the Neem tree is 'Neem'.";
+        } else if (query.includes("floral name")) {
+          response = "The flora name of Neem tree is Indian Lilac.";
+        } else if (query.includes("benefits")) {
+          response = "Neem tree has many benefits, including being a natural pesticide, mosquito repellent, and skin care remedy!";
+        } else if (query.includes("how many trees are there in iitb")) {
+          response = "There are around 5000+ trees in IIT Bombay.";
+        } else if (query.includes("neem trees in iitb")) {
+          response = "There are approximately 300+ Neem trees in IIT Bombay.";
+        }
+
+        responseContainer.innerHTML = `<p>${response}</p>`;
+        userInput.value = "";  // Clear the input after query
+      }
+    });
+  </script>
 
 </body>
 </html>
