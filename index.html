@@ -79,7 +79,7 @@
 
   <!-- Search bar section -->
   <div class="search-container">
-    <input class="search-bar" type="text" placeholder="Ask me about Neem Tree..." id="userInput">
+    <input class="search-bar" type="text" placeholder="Ask me anything about Neem Tree..." id="userInput">
   </div>
 
   <h1>
@@ -124,6 +124,10 @@
     <li>Neem products are eco-friendly and biodegradable, making them safe for the environment.</li>
   </ul>
 
+  <h3>Tree Count at IIT Bombay 🌳</h3>
+  <p><strong>Total Trees in IITB:</strong> 12,000 trees 🌳</p>
+  <p><strong>Number of Neem Trees in IITB:</strong> 50 Neem trees 🌿</p>
+
   <footer>
     Website Maker – Shaurya Shinde 🧠<br>
     Printing Supervisor – Arnav Shinde 🖨️<br>
@@ -134,27 +138,21 @@
   </footer>
 
   <script>
-    // JavaScript for AI-like search functionality
+    // JavaScript for Google search-like functionality
     const userInput = document.getElementById("userInput");
     const responseContainer = document.getElementById("response");
 
     userInput.addEventListener("keyup", function(event) {
       if (event.key === "Enter") {
         let query = userInput.value.toLowerCase().trim();
+
+        // If user input is recognized, show a predefined response
         let response = "Sorry, I don't understand that question. Please try asking something else!";
-        
-        if (query.includes("scientific name")) {
-          response = "The scientific name of the Neem tree is Azadirachta indica.";
-        } else if (query.includes("common name")) {
-          response = "The common name of the Neem tree is 'Neem'.";
-        } else if (query.includes("floral name")) {
-          response = "The flora name of Neem tree is Indian Lilac.";
-        } else if (query.includes("benefits")) {
-          response = "Neem tree has many benefits, including being a natural pesticide, mosquito repellent, and skin care remedy!";
-        } else if (query.includes("how many trees are there in iitb")) {
-          response = "There are around 5000+ trees in IIT Bombay.";
-        } else if (query.includes("neem trees in iitb")) {
-          response = "There are approximately 300+ Neem trees in IIT Bombay.";
+
+        if (query) {
+          // Redirect to Google search if query is not recognized
+          window.open(`https://www.google.com/search?q=${encodeURIComponent(query)}`, "_blank");
+          response = `I couldn't find an answer, but I will search Google for you! 🔍`;
         }
 
         responseContainer.innerHTML = `<p>${response}</p>`;
