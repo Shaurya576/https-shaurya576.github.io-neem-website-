@@ -5,27 +5,54 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Neem Tree Website</title>
   <style>
+    /* Loading screen styles */
+    .loading-screen {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: #ffffff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      z-index: 1000;
+    }
+
+    .loading-screen img {
+      width: 120px; /* Increase the size of the logo */
+      margin-bottom: 20px;
+    }
+
+    .loading-screen p {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #2e7d32;
+    }
+
+    /* Main content styles */
     body {
       background: linear-gradient(to right, #d0f0c0, #b2f7ef);
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       margin: 0;
       padding: 20px;
       color: #034d2b;
+      display: none; /* Hide the main content initially */
     }
 
     h1 {
       display: flex;
       align-items: center;
-      justify-content: center; /* Centers the text horizontally */
+      justify-content: center;
       font-size: 2.5rem;
       font-weight: bold;
       text-shadow: 1px 1px 2px #228b22;
       margin-bottom: 10px;
-      text-align: center; /* Centers the text inside the h1 */
     }
 
     h1 img {
-      width: 60px;
+      width: 120px; /* Set logo size here */
       margin-right: 15px;
     }
 
@@ -43,14 +70,6 @@
       box-shadow: 0px 8px 15px rgba(0, 128, 0, 0.4);
     }
 
-    .facts {
-      background-color: #f0fff0;
-      padding: 20px;
-      border-radius: 10px;
-      box-shadow: 0px 0px 8px rgba(0, 128, 0, 0.3);
-      margin-bottom: 30px;
-    }
-
     footer {
       background-color: #c2f0c2;
       padding: 15px;
@@ -58,12 +77,6 @@
       border-radius: 10px;
       font-weight: bold;
       margin-top: 30px;
-    }
-
-    .legend {
-      margin-top: 10px;
-      font-size: 1.2rem;
-      color: #2b6d2b;
     }
 
     .credits {
@@ -86,64 +99,81 @@
 </head>
 <body>
 
-  <h1>
+  <!-- Loading screen -->
+  <div class="loading-screen" id="loadingScreen">
     <img src="https://pmshri.education.gov.in/static/media/pm-shri.ec4909ab870a611f73d7.png" alt="PM SHRI Logo">
-    PM SHRI KV IITB POWAI
-  </h1>
-
-  <h2>🌿 Neem Tree (Azadirachta indica) - नीम 🌿</h2>
-  <p><strong>Scientific Name:</strong> Azadirachta indica</p>
-  <p><strong>Common Name:</strong> Neem</p>
-  <p><strong>Hindi Name:</strong> नीम</p>
-  <p><strong>Flora Name:</strong> Indian Lilac</p>
-  <p><strong>Trees in IIT Bombay:</strong> 🌳 5000+</p>
-  <p><strong>Neem Trees in IITB:</strong> 🌿 Around 300+</p>
-
-  <div class="facts">
-    <h2>🌟 Interesting Facts about Neem 🌟</h2>
-    <ul>
-      <li>🌱 Neem has been used for over 2000 years in India.</li>
-      <li>🦟 It acts as a natural mosquito repellent.</li>
-      <li>🌿 Neem oil is used in cosmetics and skin care.</li>
-      <li>🛡️ It's called "Village Pharmacy" due to its healing power.</li>
-      <li>🌾 Farmers use neem as natural pesticide.</li>
-      <li>🍃 Neem leaves purify the air and environment.</li>
-      <li>🦷 Neem twigs are used as natural toothbrushes (datun).</li>
-      <li>💊 Used in Ayurvedic and Unani medicine systems.</li>
-      <li>💚 Rich in antioxidants and antifungal properties.</li>
-      <li>🌍 Plays a major role in sustainable agriculture.</li>
-      <li>💧 Neem can survive in dry regions with less water.</li>
-      <li>👶 Neem is used in baby products due to its gentleness.</li>
-      <li>😷 Used in treating skin infections and rashes.</li>
-      <li>🧼 Added in herbal soaps and shampoos.</li>
-      <li>🌳 Its wood is termite resistant.</li>
-      <li>📜 Neem is even mentioned in ancient texts.</li>
-      <li>👩‍🌾 Used in making organic fertilizers.</li>
-      <li>🦠 Known to kill bacteria and fungi naturally.</li>
-      <li>⚖️ Helps balance the ecosystem.</li>
-      <li>📖 Promotes learning about herbal and natural medicine.</li>
-    </ul>
+    <p>Loading...</p>
   </div>
 
-  <img src="https://media.istockphoto.com/id/1188067568/photo/azadirachta-indica-a-branch-of-neem-tree-leaves-natural-medicine.jpg?s=612x612&w=0&k=20&c=UwDQ2iD0hvdVgUby2cGOZtLleSGguxsB_-4izFTJaYw=" alt="Neem Image 1" />
-  <img src="https://images.pexels.com/photos/12643734/pexels-photo-12643734.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="Neem Image 2" />
-  <img src="https://media.istockphoto.com/id/1762094055/photo/green-lush-plant.jpg?s=612x612&w=0&k=20&c=nGMGEpIsRn6sXIKUSSeyu1t83RrEPwRTyt_funneIe8=" alt="Neem Image 3" />
-  <img src="https://images.pexels.com/photos/6033417/pexels-photo-6033417.jpeg" alt="Neem Leaves Closeup" />
+  <!-- Main Content -->
+  <div id="mainContent">
+    <h1>
+      <img src="https://pmshri.education.gov.in/static/media/pm-shri.ec4909ab870a611f73d7.png" alt="PM SHRI Logo">
+      PM SHRI KV IITB POWAI
+    </h1>
 
-  <div class="made-by">
-    MADE BY SHAURYA SHINDE
-  </div>
+    <h2>🌿 Neem Tree (Azadirachta indica) - नीम 🌿</h2>
+    <p><strong>Scientific Name:</strong> Azadirachta indica</p>
+    <p><strong>Common Name:</strong> Neem</p>
+    <p><strong>Hindi Name:</strong> नीम</p>
+    <p><strong>Flora Name:</strong> Indian Lilac</p>
+    <p><strong>Trees in IIT Bombay:</strong> 🌳 5000+</p>
+    <p><strong>Neem Trees in IITB:</strong> 🌿 Around 300+</p>
 
-  <footer>
-    <div class="credits">
-      Website Maker – Shaurya Shinde 🧠<br>
-      Printing Supervisor – Arnav Shinde 🖨️<br>
-      Lamination Supervisor – Harsh Kohli 🔖<br>
-      Investor – Parth Singh 💸<br>
-      📚 Class 9th B, 2025 📚
+    <div class="facts">
+      <h2>🌟 Interesting Facts about Neem 🌟</h2>
+      <ul>
+        <li>🌱 Neem has been used for over 2000 years in India.</li>
+        <li>🦟 It acts as a natural mosquito repellent.</li>
+        <li>🌿 Neem oil is used in cosmetics and skin care.</li>
+        <li>🛡️ It's called "Village Pharmacy" due to its healing power.</li>
+        <li>🌾 Farmers use neem as natural pesticide.</li>
+        <li>🍃 Neem leaves purify the air and environment.</li>
+        <li>🦷 Neem twigs are used as natural toothbrushes (datun).</li>
+        <li>💊 Used in Ayurvedic and Unani medicine systems.</li>
+        <li>💚 Rich in antioxidants and antifungal properties.</li>
+        <li>🌍 Plays a major role in sustainable agriculture.</li>
+        <li>💧 Neem can survive in dry regions with less water.</li>
+        <li>👶 Neem is used in baby products due to its gentleness.</li>
+        <li>😷 Used in treating skin infections and rashes.</li>
+        <li>🧼 Added in herbal soaps and shampoos.</li>
+        <li>🌳 Its wood is termite resistant.</li>
+        <li>📜 Neem is even mentioned in ancient texts.</li>
+        <li>👩‍🌾 Used in making organic fertilizers.</li>
+        <li>🦠 Known to kill bacteria and fungi naturally.</li>
+        <li>⚖️ Helps balance the ecosystem.</li>
+        <li>📖 Promotes learning about herbal and natural medicine.</li>
+      </ul>
     </div>
-    <div class="legend">🔥 Legendary Team 💪👑🧠🖨️🔖💸</div>
-  </footer>
+
+    <img src="https://media.istockphoto.com/id/1188067568/photo/azadirachta-indica-a-branch-of-neem-tree-leaves-natural-medicine.jpg?s=612x612&w=0&k=20&c=UwDQ2iD0hvdVgUby2cGOZtLleSGguxsB_-4izFTJaYw=" alt="Neem Image 1" />
+    <img src="https://images.pexels.com/photos/12643734/pexels-photo-12643734.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="Neem Image 2" />
+    <img src="https://media.istockphoto.com/id/1762094055/photo/green-lush-plant.jpg?s=612x612&w=0&k=20&c=nGMGEpIsRn6sXIKUSSeyu1t83RrEPwRTyt_funneIe8=" alt="Neem Image 3" />
+    <img src="https://images.pexels.com/photos/6033417/pexels-photo-6033417.jpeg" alt="Neem Leaves Closeup" />
+
+    <div class="made-by">
+      MADE BY SHAURYA SHINDE
+    </div>
+
+    <footer>
+      <div class="credits">
+        Website Maker – Shaurya Shinde 🧠<br>
+        Printing Supervisor – Arnav Shinde 🖨️<br>
+        Lamination Supervisor – Harsh Kohli 🔖<br>
+        Investor – Parth Singh 💸<br>
+        📚 Class 9th B, 2025 📚
+      </div>
+      <div class="legend">🔥 Legendary Team 💪👑🧠🖨️🔖💸</div>
+    </footer>
+  </div>
+
+  <script>
+    // After 3 seconds, hide the loading screen and show the main content
+    setTimeout(function() {
+      document.getElementById('loadingScreen').style.display = 'none'; // Hide the loading screen
+      document.getElementById('mainContent').style.display = 'block'; // Show the main content
+    }, 3000); // 3 seconds delay
+  </script>
 
 </body>
 </html>
