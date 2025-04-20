@@ -1,148 +1,105 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Neem Tree Website</title>
-  <style>
-    /* Main content styles */
-    body {
-      background: linear-gradient(to right, #d0f0c0, #b2f7ef); /* Same gradient */
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      margin: 0;
-      padding: 20px;
-      color: #034d2b;
-      font-size: 18px; /* Increased font size */
-    }
+<!-- 🎵 Audio for BGM and typing -->
+<audio id="bgm" loop>
+  <source src="https://cdn.pixabay.com/audio/2022/03/15/audio_8d24fd8c94.mp3" type="audio/mpeg">
+</audio>
 
-    h1 {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 3rem; /* Increased font size */
-      font-weight: bold;
-      text-shadow: 1px 1px 2px #228b22;
-      margin-bottom: 15px;
-    }
+<audio id="typeSound">
+  <source src="https://cdn.pixabay.com/audio/2022/10/06/audio_7d3e57692e.mp3" type="audio/mpeg">
+</audio>
 
-    h1 img {
-      width: 120px; /* Adjust PM SHRI Logo size */
-      margin-right: 15px;
-    }
+<style>
+  #credits {
+    display: none;
+    font-family: 'Courier New', Courier, monospace;
+    white-space: pre-line;
+    border: 2px solid #034d2b;
+    padding: 15px;
+    margin-top: 20px;
+    border-radius: 10px;
+    background-color: #e6ffe6;
+    color: #034d2b;
+    font-size: 1.1rem;
+  }
 
-    h2 {
-      font-size: 2rem; /* Increased font size */
-      margin-bottom: 10px;
-    }
+  #typewriter {
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 3px solid #034d2b;
+    animation: typing 4s steps(70, end), blink 0.75s step-end infinite;
+  }
 
-    p {
-      font-size: 1.2rem; /* Increased font size */
-      line-height: 1.6;
-    }
+  @keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+  }
 
-    img {
-      width: 100%;
-      max-width: 600px;
-      margin: 20px 0;
-      border-radius: 10px;
-      box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
+  @keyframes blink {
+    from, to { border-color: transparent }
+    50% { border-color: #034d2b; }
+  }
 
-    img:hover {
-      transform: scale(1.1);
-      box-shadow: 0px 8px 15px rgba(0, 128, 0, 0.4);
-    }
+  .credit-button {
+    padding: 12px 25px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    font-size: 1.1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
 
-    footer {
-      background-color: #c2f0c2;
-      padding: 20px;
-      text-align: center;
-      border-radius: 10px;
-      font-weight: bold;
-      margin-top: 30px;
-      font-size: 1.2rem; /* Increased font size */
-    }
+  .credit-button:hover {
+    background-color: #388e3c;
+    transform: scale(1.05);
+  }
 
-    .credits {
-      font-size: 1rem;
-      font-weight: normal;
-      color: #1b5e20;
-    }
+  .credit-title {
+    font-size: 2rem;
+    font-weight: bold;
+    background: linear-gradient(to top, #003366, #66ccff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 15px;
+  }
+</style>
 
-    .made-by {
-      font-size: 3.5rem; /* Increased font size */
-      font-weight: bold;
-      margin-top: 50px;
-      text-align: center;
-      background: linear-gradient(to bottom, #004d7a, #00324e); /* Darker Blue Gradient */
-      -webkit-background-clip: text;
-      color: transparent;
-    }
-
-  </style>
-</head>
-<body>
-
-  <h1>
-    <!-- PM SHRI Logo -->
-    <img src="https://pmshri.education.gov.in/static/media/pm-shri.ec4909ab870a611f73d7.png" alt="PM SHRI Logo">
-    PM SHRI KV IITB POWAI
-  </h1>
-
-  <h2>🌿 Neem Tree (Azadirachta indica) - नीम 🌿</h2>
-  <p><strong>Scientific Name:</strong> Azadirachta indica</p>
-  <p><strong>Common Name:</strong> Neem</p>
-  <p><strong>Hindi Name:</strong> नीम</p>
-  <p><strong>Flora Name:</strong> Indian Lilac</p>
-  <p><strong>Trees in IIT Bombay:</strong> 🌳 5000+</p>
-  <p><strong>Neem Trees in IITB:</strong> 🌿 Around 300+</p>
-
-  <div class="facts">
-    <h2>🌟 Interesting Facts about Neem 🌟</h2>
-    <ul>
-      <li>🌱 Neem has been used for over 2000 years in India.</li>
-      <li>🦟 It acts as a natural mosquito repellent.</li>
-      <li>🌿 Neem oil is used in cosmetics and skin care.</li>
-      <li>🛡️ It's called "Village Pharmacy" due to its healing power.</li>
-      <li>🌾 Farmers use neem as natural pesticide.</li>
-      <li>🍃 Neem leaves purify the air and environment.</li>
-      <li>🦷 Neem twigs are used as natural toothbrushes (datun).</li>
-      <li>💊 Used in Ayurvedic and Unani medicine systems.</li>
-      <li>💚 Rich in antioxidants and antifungal properties.</li>
-      <li>🌍 Plays a major role in sustainable agriculture.</li>
-      <li>💧 Neem can survive in dry regions with less water.</li>
-      <li>👶 Neem is used in baby products due to its gentleness.</li>
-      <li>😷 Used in treating skin infections and rashes.</li>
-      <li>🧼 Added in herbal soaps and shampoos.</li>
-      <li>🌳 Its wood is termite resistant.</li>
-      <li>📜 Neem is even mentioned in ancient texts.</li>
-      <li>👩‍🌾 Used in making organic fertilizers.</li>
-      <li>🦠 Known to kill bacteria and fungi naturally.</li>
-      <li>⚖️ Helps balance the ecosystem.</li>
-      <li>📖 Promotes learning about herbal and natural medicine.</li>
-    </ul>
+<div style="text-align:center; margin-top: 50px;">
+  <button class="credit-button" onclick="revealCredits()">🌟 Show Credits 🌟</button>
+  <div id="credits">
+    <div class="credit-title">MADE BY SHAURYA SHINDE 🧠🔥</div>
+    <div id="typewriter"></div>
   </div>
+</div>
 
-  <img src="https://media.istockphoto.com/id/1188067568/photo/azadirachta-indica-a-branch-of-neem-tree-leaves-natural-medicine.jpg?s=612x612&w=0&k=20&c=UwDQ2iD0hvdVgUby2cGOZtLleSGguxsB_-4izFTJaYw=" alt="Neem Image 1" />
-  <img src="https://images.pexels.com/photos/12643734/pexels-photo-12643734.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="Neem Image 2" />
-  <img src="https://media.istockphoto.com/id/1762094055/photo/green-lush-plant.jpg?s=612x612&w=0&k=20&c=nGMGEpIsRn6sXIKUSSeyu1t83RrEPwRTyt_funneIe8=" alt="Neem Image 3" />
-  <img src="https://images.pexels.com/photos/6033417/pexels-photo-6033417.jpeg" alt="Neem Leaves Closeup" />
+<script>
+  const typeText = `Printing Supervisor – Arnav Shinde 🖨️
+Lamination Supervisor – Harsh Kohli 🔖
+Investor – Parth Singh 💸
 
-  <div class="made-by">
-    MADE BY SHAURYA SHINDE
-  </div>
+📚 Class 9th B, 2025 📚
+🔥 Legendary Team 💪👑🧠🖨️🔖💸`;
 
-  <footer>
-    <div class="credits">
-      Website Maker – Shaurya Shinde 🧠<br>
-      Printing Supervisor – Arnav Shinde 🖨️<br>
-      Lamination Supervisor – Harsh Kohli 🔖<br>
-      Investor – Parth Singh 💸<br>
-      📚 Class 9th B, 2025 📚
-    </div>
-    <div class="legend">🔥 Legendary Team 💪👑🧠🖨️🔖💸</div>
-  </footer>
+  function revealCredits() {
+    document.getElementById('credits').style.display = 'block';
+    const typewriter = document.getElementById('typewriter');
+    const typeSound = document.getElementById('typeSound');
+    const bgm = document.getElementById('bgm');
 
-</body>
-</html>
+    let i = 0;
+    typewriter.innerHTML = '';
+    bgm.volume = 0.2;
+    bgm.play();
+
+    const interval = setInterval(() => {
+      if (i < typeText.length) {
+        typewriter.innerHTML += typeText.charAt(i);
+        typeSound.currentTime = 0;
+        typeSound.play();
+        i++;
+      } else {
+        clearInterval(interval);
+      }
+    }, 50);
+  }
+</script>
