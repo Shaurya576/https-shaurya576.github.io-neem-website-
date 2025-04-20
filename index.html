@@ -18,32 +18,12 @@
             padding: 15px;
         }
         .logo {
-            width: 40px;
+            width: 50px;
             vertical-align: middle;
         }
         .site-logo {
             width: 50px;
             vertical-align: middle;
-        }
-        .search-container {
-            text-align: center;
-            margin-top: 20px;
-        }
-        .search-bar {
-            padding: 10px;
-            font-size: 1rem;
-            width: 300px;
-            border-radius: 5px;
-            border: 2px solid #4CAF50;
-        }
-        .response-container {
-            margin-top: 20px;
-            padding: 10px;
-            background-color: #f0fff0;
-            border-radius: 10px;
-            max-width: 600px;
-            margin-left: auto;
-            margin-right: auto;
         }
         footer {
             background-color: #4CAF50;
@@ -57,51 +37,18 @@
 <body>
 
     <header>
-        <!-- Site Logo -->
-        <img class="site-logo" src="https://images.pexels.com/photos/101841/pexels-photo-101841.jpeg?cs=srgb&dl=pexels-asphotograpy-101841.jpg&fm=jpg" alt="Site Logo">
-        <h1>PM SHRI KV IIT Powai</h1>
         <!-- PM SHRI Logo -->
         <img class="logo" src="https://pmshri.education.gov.in/static/media/pm-shri.ec4909ab870a611f73d7.png" alt="PM SHRI Logo">
+        <!-- Site Title -->
+        <h1>PM SHRI KV IIT Powai</h1>
+        <!-- Site Logo -->
+        <img class="site-logo" src="https://images.pexels.com/photos/101841/pexels-photo-101841.jpeg?cs=srgb&dl=pexels-asphotograpy-101841.jpg&fm=jpg" alt="Site Logo">
     </header>
-
-    <div class="search-container">
-        <input class="search-bar" type="text" id="searchQuery" placeholder="Ask me anything about Neem Tree..." />
-        <button onclick="search()">Search</button>
-    </div>
-
-    <div class="response-container" id="response">
-        <p>Type your question and hit 'Search' to get an answer! 🌿</p>
-    </div>
 
     <footer>
         <p>Website Maker: Shaurya Shinde | Printing Supervisor: Arnav Shinde | Lamination Supervisor: Harsh Kohli | Investor: Parth Singh</p>
         <p>Class 9th B, 2025</p>
     </footer>
-
-    <script>
-        // Replace with your Google API key and Custom Search Engine ID
-        const apiKey = "YOUR_GOOGLE_API_KEY"; 
-        const cx = "YOUR_CUSTOM_SEARCH_ENGINE_ID"; 
-
-        async function search() {
-            const query = document.getElementById('searchQuery').value;
-            const responseContainer = document.getElementById('response');
-            if (!query) {
-                responseContainer.innerHTML = "<p>Please enter a question!</p>";
-                return;
-            }
-
-            const url = `https://www.googleapis.com/customsearch/v1?q=${query}&key=${apiKey}&cx=${cx}`;
-            try {
-                const res = await fetch(url);
-                const data = await res.json();
-                const result = data.items ? data.items[0].snippet : "Sorry, I couldn't find an answer!";
-                responseContainer.innerHTML = `<p>${result}</p>`;
-            } catch (error) {
-                responseContainer.innerHTML = "<p>Sorry, something went wrong. Please try again later.</p>";
-            }
-        }
-    </script>
 
 </body>
 </html>
