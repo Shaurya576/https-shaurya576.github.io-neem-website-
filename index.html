@@ -1,165 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Neem Tree Website</title>
-  <style>
-    body {
-      background: linear-gradient(to right, #d0f0c0, #b2f7ef);
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      margin: 0;
-      padding: 20px;
-      color: #034d2b;
-    }
-
-    h1 {
-      display: flex;
-      align-items: center;
-      font-size: 2.5rem;
-      font-weight: bold;
-      text-shadow: 1px 1px 2px #228b22;
-      margin-bottom: 10px;
-    }
-
-    h1 img {
-      width: 60px;
-      margin-right: 15px;
-    }
-
-    .search-container {
-      display: flex;
-      justify-content: center;
-      margin-bottom: 20px;
-    }
-
-    .search-bar {
-      width: 300px;
-      padding: 10px;
-      font-size: 1rem;
-      border: 2px solid #228b22;
-      border-radius: 25px;
-      outline: none;
-    }
-
-    .search-bar:focus {
-      border-color: #2e8b57;
-    }
-
-    .response-container {
-      margin-top: 20px;
-      background-color: #f0fff0;
-      padding: 10px;
-      border-radius: 10px;
-      box-shadow: 0px 0px 8px rgba(0, 128, 0, 0.3);
-    }
-
-    footer {
-      background-color: #c2f0c2;
-      padding: 15px;
-      text-align: center;
-      border-radius: 10px;
-      font-weight: bold;
-      margin-top: 30px;
-    }
-
-    .legend {
-      color: #2e8b57;
-    }
-
-    .neem-image {
-      max-width: 100%;
-      height: auto;
-      border-radius: 10px;
-      margin-top: 15px;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neem Tree Website</title>
+    <style>
+        body {
+            background-color: #eaf0e5;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 15px;
+        }
+        .search-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .search-bar {
+            padding: 10px;
+            font-size: 1rem;
+            width: 300px;
+            border-radius: 5px;
+            border: 2px solid #4CAF50;
+        }
+        .response-container {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #f0fff0;
+            border-radius: 10px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        footer {
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            margin-top: 30px;
+        }
+        .logo {
+            width: 40px;
+            vertical-align: middle;
+        }
+    </style>
 </head>
 <body>
 
-  <!-- Search bar section -->
-  <div class="search-container">
-    <input class="search-bar" type="text" placeholder="Ask me anything about Neem Tree..." id="userInput">
-  </div>
+    <header>
+        <img class="logo" src="https://pmshri.education.gov.in/static/media/pm-shri.ec4909ab870a611f73d7.png" alt="PM SHRI Logo">
+        <h1>PM SHRI KV IIT Powai</h1>
+    </header>
 
-  <h1>
-    <img src="https://pmshri.education.gov.in/static/media/pm-shri.ec4909ab870a611f73d7.png" alt="PM SHRI Logo">
-    PM SHRI KV IIT POWAI
-  </h1>
+    <div class="search-container">
+        <input class="search-bar" type="text" id="searchQuery" placeholder="Ask me anything about Neem Tree..." />
+        <button onclick="search()">Search</button>
+    </div>
 
-  <div class="response-container" id="response">
-    <p>Ask me anything about Neem Tree! 🌿</p>
-  </div>
+    <div class="response-container" id="response">
+        <p>Type your question and hit 'Search' to get an answer! 🌿</p>
+    </div>
 
-  <img class="neem-image" src="https://images.pexels.com/photos/12643734/pexels-photo-12643734.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="Neem Tree Image">
+    <footer>
+        <p>Website Maker: Shaurya Shinde | Printing Supervisor: Arnav Shinde | Lamination Supervisor: Harsh Kohli | Investor: Parth Singh</p>
+        <p>Class 9th B, 2025</p>
+    </footer>
 
-  <h2>About the Neem Tree 🌳</h2>
-  <p><strong>Scientific Name:</strong> Azadirachta indica</p>
-  <p><strong>Common Name:</strong> Neem</p>
-  <p><strong>Floral Name:</strong> Indian Lilac</p>
-  <p><strong>Family:</strong> Meliaceae</p>
-  <p><strong>Other Names:</strong> Nim, Neen, Nimba (Hindi)</p>
+    <script>
+        // Replace with your Google API key and Custom Search Engine ID
+        const apiKey = "YOUR_GOOGLE_API_KEY"; 
+        const cx = "YOUR_CUSTOM_SEARCH_ENGINE_ID"; 
 
-  <h3>Interesting Facts About Neem 🌿</h3>
-  <ul>
-    <li>The Neem tree is known for its medicinal properties, especially for skin and hair health.</li>
-    <li>It is often referred to as "The Village Pharmacy" due to its wide range of uses in traditional medicine.</li>
-    <li>Neem leaves are used to make organic pesticides, as they have natural insect-repelling properties.</li>
-    <li>Neem oil is widely used in cosmetics and personal care products.</li>
-    <li>In many cultures, Neem is considered a sacred tree and is often planted near temples.</li>
-    <li>Its bark, leaves, and seeds are used in various Ayurvedic medicines.</li>
-    <li>The tree is also known for its antibacterial and antifungal properties, making it useful in treating infections.</li>
-    <li>Neem leaves can help purify the air, making it a beneficial tree to plant in urban areas.</li>
-    <li>In India, it is common to use Neem in religious rituals, symbolizing health and protection.</li>
-    <li>Neem is also known for its ability to promote the growth of other plants by improving soil quality.</li>
-    <li>The Neem tree can live for over 100 years, and it grows quickly in tropical and subtropical climates.</li>
-    <li>It is believed that planting a Neem tree in the home can bring good health and prosperity.</li>
-    <li>Neem is also an effective mosquito repellent and is used in creating organic insect repellents.</li>
-    <li>The Neem tree produces small white flowers that are fragrant and attractive to pollinators.</li>
-    <li>The tree's roots help in preventing soil erosion, particularly in areas prone to desertification.</li>
-    <li>Neem is also used to treat waterborne diseases and purify drinking water in rural areas.</li>
-    <li>In addition to medicinal uses, Neem is also a source of biofuel.</li>
-    <li>The tree has a strong resilience to drought and is considered a hardy plant in arid regions.</li>
-    <li>In traditional Indian medicine, Neem is used to detoxify the body and improve immune function.</li>
-    <li>Neem products are eco-friendly and biodegradable, making them safe for the environment.</li>
-  </ul>
+        async function search() {
+            const query = document.getElementById('searchQuery').value;
+            const responseContainer = document.getElementById('response');
+            if (!query) {
+                responseContainer.innerHTML = "<p>Please enter a question!</p>";
+                return;
+            }
 
-  <h3>Tree Count at IIT Bombay 🌳</h3>
-  <p><strong>Total Trees in IITB:</strong> 12,000 trees 🌳</p>
-  <p><strong>Number of Neem Trees in IITB:</strong> 50 Neem trees 🌿</p>
-
-  <footer>
-    Website Maker – Shaurya Shinde 🧠<br>
-    Printing Supervisor – Arnav Shinde 🖨️<br>
-    Lamination Supervisor – Harsh Kohli 🔖<br>
-    Investor – Parth Singh 💸<br>
-    📚 Class 9th B, 2025 📚<br>
-    <div class="legend">🔥 Legendary Team 💪👑🧠🖨️🔖💸</div>
-  </footer>
-
-  <script>
-    // JavaScript for Google search-like functionality
-    const userInput = document.getElementById("userInput");
-    const responseContainer = document.getElementById("response");
-
-    userInput.addEventListener("keyup", function(event) {
-      if (event.key === "Enter") {
-        let query = userInput.value.toLowerCase().trim();
-
-        // If user input is recognized, show a predefined response
-        let response = "Sorry, I don't understand that question. Please try asking something else!";
-
-        if (query) {
-          // Redirect to Google search if query is not recognized
-          window.open(`https://www.google.com/search?q=${encodeURIComponent(query)}`, "_blank");
-          response = `I couldn't find an answer, but I will search Google for you! 🔍`;
+            const url = `https://www.googleapis.com/customsearch/v1?q=${query}&key=${apiKey}&cx=${cx}`;
+            try {
+                const res = await fetch(url);
+                const data = await res.json();
+                const result = data.items ? data.items[0].snippet : "Sorry, I couldn't find an answer!";
+                responseContainer.innerHTML = `<p>${result}</p>`;
+            } catch (error) {
+                responseContainer.innerHTML = "<p>Sorry, something went wrong. Please try again later.</p>";
+            }
         }
-
-        responseContainer.innerHTML = `<p>${response}</p>`;
-        userInput.value = "";  // Clear the input after query
-      }
-    });
-  </script>
+    </script>
 
 </body>
 </html>
